@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body  {
+        background-image:url('bgp.png');
+        font-size:16px;
+        font-family: poppins;
+        background-color: hsl(0, 100%, 74%);
+	}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    .master {
+        margin: 100px 30px 30px 720px;
+        
+	}
+    .top {
+        width:550px;
+        padding: 15px 20px;
+        background-color: hsl(248, 32%, 49%);
+        border-radius:10px;
+        color:white;
+        text-align:center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+    .lo {
+        width:550px;
+        background-color:white;
+        border-radius:10px;
+        padding:20px;
+        margin-top:30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+    .content {
+        position:absolute;
+        width:660px;
+        margin-left:100px;
+        top:180px;
+        color:white;
+        font-size:50px;
+	}
+    .center {
+      text-align:center;
+	}
+    .fonter {
+         font-size:15px;
+	}
+    
+    
+    input[type=text] {
+        width:100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=password] {
+        width:100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=email] {
+        width:100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type=submit] {
+          width: 100%;
+          background-color: hsl(154, 59%, 51%);
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+     }
+    @media only screen and (max-width:600px) {
+         
+          .top {
+                font-size:20px;
+                width:450px;
+                padding: 15px 20px;
+                background-color: hsl(248, 32%, 49%);
+                border-radius:10px;
+                color:white;
+                text-align:center;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                
+	}
+          .lo {
+                width:450px;
+                background-color:white;
+                border-radius:10px;
+                padding:20px;
+                margin-top:30px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+          .content {
+                width:450px;
+                text-align:center;
+                margin:0px;
+                position:absolute;
+                top:50px;
+                left:60px;
+                right:0px;
+                font-size:50px;
+                color:white;
+    }
+          .master {
+                 margin: 575px 0px 0px 30px;
+	}
+
+          .fonter {
+                font-size:25px;  
+	}
+         
+  </style>
+
+
+</head>
+<body>
+
+<div class="content">
+    <p style="font-weight:700"> Learn to code by watching others </p>
+    <div class="fonter">
+    <p> see how experienced developers solve problems in real-time.<br> Watching scripted tutorials is great,but understanding how <br> developers think is invaluable </p>
+    </div>
+</div> 
+<div class="master">
+    <div class="top">
+        <strong>Try it free 7 days </strong> then $20/mo. thereafter
+    </div>
+    <div class="lo">
+        <form >
+        
+            <input type="text" id="firstname" placeholder="First name" onblur="firstname()">
+        <br>
+        
+            <input type="text" id="lastname" placeholder="Last name">
+        <br>
+       
+            <input type="text" id="emailInput" placeholder="Email address">
+        <br>
+        
+            <input type="password" id="password" placeholder="Password">
+        <br>
+            <input type="submit" value="CLAIM YOUR FREE TRIAL">
+
+        </form> 
+        <div class="center">
+        <span style="font-size:10px; color:hsl(246, 25%, 77%); font-weight: 400;">By clicking the button you are agreeing to our </span> <span style="color:hsl(0, 100%, 74%); font-size: 10px ; font-weight: 400;">Terms and services </span>
+        </div>
+    </div>
+</div>
+  
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">SANJAY CHANDRAN</a>.
+    </p>
+  </footer>
+    <script>
+     document.getElementById("firstname").onblur = function() {
+        let x = document.getElementById("firstname").value
+
+        if(x === ''){
+            alert("Field is mandatory")
+		}
+	 	 }
+
+     document.getElementById("emailInput").onblur = function() {
+        let y = document.getElementById("emailInput").value
+        if(y === ''){
+            alert("Field is mandatory")
+		}
+        else{
+            if(y.includes('@') && y.includes('.')){
+    
+			}
+            else{
+                alert("Enter a valid Email")     
+			}
+		}
+        }
+    document.getElementById("password").onblur =function(){
+     let z= document.getElementById("password").value.length
+     
+     
+     if(z<8 || z>23){
+      alert("Enter characters between 8 and 23")
+	 }
+     
+	}
+
+  </script>
+</body>
+</html>
