@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     body  {
-        background-image:url('bgp.png');
+        background-image:url('images/bg-intro-desktop.png');
         font-size:16px;
         font-family: poppins;
         background-color: hsl(0, 100%, 74%);
@@ -96,7 +96,9 @@
           cursor: pointer;
      }
     @media only screen and (max-width:600px) {
-         
+         body{
+       background-image:url('images/bg-intro-mobile.png')  
+		 }
           .top {
                 font-size:20px;
                 width:450px;
